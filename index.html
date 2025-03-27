@@ -1,62 +1,72 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Algae Bioreactor Project</title>
-  <link rel="stylesheet" href="ss.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    }
+  </script>
 </head>
-<body>
-  <header>
-    <div class="logo">Algae BioReactor</div>
+<body class="bg-gray-100 text-gray-900">
+  <header class="bg-green-700 text-white p-5 shadow-lg flex justify-between items-center">
+    <div class="text-2xl font-bold">Algae BioReactor</div>
     <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="#home" class="hover:underline">Home</a></li>
+        <li><a href="#about" class="hover:underline">About</a></li>
+        <li><a href="#features" class="hover:underline">Features</a></li>
+        <li><a href="#contact" class="hover:underline">Contact</a></li>
       </ul>
+      <button class="md:hidden" onclick="toggleMenu()">☰</button>
     </nav>
   </header>
+  
+  <ul id="mobile-menu" class="hidden md:hidden bg-green-700 text-white p-5 space-y-4">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 
-  <section id="home">
-    <h1>Welcome to Algae Bioreactor Project</h1>
-    <p>Harnessing the power of algae for sustainable solutions.</p>
-    <button onclick="showAlert()">Learn More</button>
+  <section id="home" class="text-center py-20 bg-green-200">
+    <h1 class="text-4xl font-bold">Welcome to Algae Bioreactor Project</h1>
+    <p class="mt-4 text-lg">Harnessing the power of algae for sustainable solutions.</p>
+    <button class="mt-6 bg-green-700 text-white px-6 py-3 rounded-full hover:bg-green-800 transition">Learn More</button>
   </section>
 
-  <section id="about">
-    <h2>About the Project</h2>
-    <p>This project focuses on developing an efficient algae bioreactor system aimed at producing renewable biofuel and promoting environmental sustainability. Our team is also exploring algae gene editing for optimized growth and productivity.</p>
+  <section id="about" class="p-10 text-center">
+    <h2 class="text-3xl font-semibold">About the Project</h2>
+    <p class="mt-4 max-w-3xl mx-auto">This project focuses on developing an efficient algae bioreactor system aimed at producing renewable biofuel and promoting environmental sustainability. Our team is also exploring algae gene editing for optimized growth and productivity.</p>
   </section>
 
-  <section id="features">
-    <h2>Key Features</h2>
-    <div class="features-grid">
-      <div class="feature-card">High CO₂ Absorption</div>
-      <div class="feature-card">Renewable Biofuel Production</div>
-      <div class="feature-card">Algae Gene Editing</div>
-      <div class="feature-card">Low Energy Consumption</div>
-      <div class="feature-card">Modular and Scalable Design</div>
-      <div class="feature-card">Eco-Friendly System</div>
+  <section id="features" class="p-10 bg-gray-200">
+    <h2 class="text-3xl font-semibold text-center">Key Features</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 max-w-4xl mx-auto">
+      <div class="bg-white p-5 rounded-lg shadow-lg">High CO₂ Absorption</div>
+      <div class="bg-white p-5 rounded-lg shadow-lg">Renewable Biofuel Production</div>
+      <div class="bg-white p-5 rounded-lg shadow-lg">Algae Gene Editing</div>
+      <div class="bg-white p-5 rounded-lg shadow-lg">Low Energy Consumption</div>
+      <div class="bg-white p-5 rounded-lg shadow-lg">Modular and Scalable Design</div>
+      <div class="bg-white p-5 rounded-lg shadow-lg">Eco-Friendly System</div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form id="contactForm">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="email" id="email" placeholder="Your Email" required>
-      <textarea id="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+  <section id="contact" class="p-10 text-center">
+    <h2 class="text-3xl font-semibold">Contact Us</h2>
+    <form class="mt-6 max-w-lg mx-auto space-y-4">
+      <input type="text" placeholder="Your Name" class="w-full p-3 border rounded">
+      <input type="email" placeholder="Your Email" class="w-full p-3 border rounded">
+      <textarea placeholder="Your Message" class="w-full p-3 border rounded"></textarea>
+      <button class="bg-green-700 text-white px-6 py-3 rounded-full hover:bg-green-800 transition w-full">Send Message</button>
     </form>
   </section>
 
-  <footer>
+  <footer class="bg-green-700 text-white text-center p-4 mt-10">
     <p>&copy; 2025 Algae Bioreactor Project. All rights reserved.</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
