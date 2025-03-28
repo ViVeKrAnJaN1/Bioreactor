@@ -64,7 +64,7 @@ section {
   margin-bottom: 20px;
 }
 
-button1 {
+.learn{
   padding: 1.3em 3em;
   font-size: 12px;
   text-transform: uppercase;
@@ -80,14 +80,14 @@ button1 {
   outline: none;
 }
 
-button1:hover {
+.learn:hover {
   background-color: #23c483;
   box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
   color: #fff;
   transform: translateY(-7px);
 }
 
-button1:active {
+.learn:active {
   transform: translateY(-1px);
 }
 
